@@ -1,0 +1,11 @@
+---
+- hosts: local
+  gather_facts: no
+  
+  tasks:
+    - name: Display encrypted values (for demo only!)
+      debug:
+        msg: 
+          - "API Key: {{ api_key }}"
+          - "DB Password: {{ db_password }}"
+          - "Secret Token: {{ vault_secret_token }}"
